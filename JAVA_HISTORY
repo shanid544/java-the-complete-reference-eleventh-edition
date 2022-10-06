@@ -1,0 +1,74 @@
+The History and Evolution of Java
+-----------------------------------
+Computer language innovation and development occur for two fundamental reasons
+	To adapt to changing environments and uses
+	To implement refinements and improvements in the art of programming
+Java’s Lineage
+	From C, Java derives its syntax
+	Many of Java’s object-oriented features were influenced by C++
+The Birth of Modern Programming: C
+	when a computer language is designed, trade-offs are often made, such as the following:
+		 Ease-of-use versus power
+		 Safety versus efficiency
+		 Rigidity versus extensibility
+     FORTRAN could be used to write fairly efficient programs for scientific applications, it  was not very good for system code
+	 And while BASIC was easy to learn, it wasn’t very powerful, and its lack of structure made its usefulness questionable for large programs. 
+	 Assembly language can be used to produce highly efficient programs, but it is not easy to learn or use effectively. Further, debugging assembly code can be quite difficult.
+     Another compounding problem was that early computer languages such as BASIC, COBOL, and FORTRAN were not designed around structured principles.
+	 spaghetti code
+	 While languages like Pascal are structured, they were not designed for efficiency, and failed to include certain features necessary to make them applicable to a wide range of programs
+	 BCPL->B->C(1970)
+C++: The Next Step
+	Since C is a successful and useful language, you might ask why a need for something else existed. The answer is complexity
+	By the early 1980s, many projects were pushing the structured approach past its limits. To solve this problem, a new way to program was invented, called object-oriented programming (OOP).
+	OOP is a programming methodology that helps organize complex programs through the use of inheritance, encapsulation, and polymorphism.
+	C++ was invented by Bjarne Stroustrup in 1979, while he was working at Bell Laboratories in Murray Hill, New Jersey. Stroustrup initially called the new language “C with Classes.” 
+The Stage Is Set for Java
+	Within a few years, the World Wide Web and the Internet would reach critical mass. This event would precipitate another revolution in programming.
+The Creation of Java
+	Java was conceived by James Gosling, Patrick Naughton, Chris Warth, Ed Frank, and Mike Sheridan at Sun Microsystems, Inc. in 1991. It took 18 months to develop the first working version.
+	This language was initially called “Oak,” but was renamed “Java” in 1995.
+	Somewhat surprisingly, the original impetus for Java was not the Internet!
+	the primary motivation was the need for a platform-independent (thatis, architecture-neutral) 
+	This second force was, of course, the World Wide Web.
+	computer world had divided itself into the three competing camps of Intel, Macintosh, and UNIX, most programmers stayed within their fortified boundaries, and the urgent need for portable code was reduced.
+	However, with the advent of the Internet and the Web, the old problem of portability returned with a vengeance.
+	After all, the Internet consists of a diverse, distributed universe populated with various types of computers, operating systems, and CPUs. Even though many kinds of platforms are attached to the Internet, users would like them all to be able to run the same program. What was once an irritating but low-priority problem had become a high-profile necessity.
+	. Java was designed to solve a certain set of problems. C++ was designed to solve a different set of problems. Both will coexist for many years to come.
+	However, Java also embodies changes in the way that people approach the writing of programs. For example, Java enhanced and refined the objectoriented paradigm used by C++, added integrated support for multithreading, and provided a library that simplified Internet access. In the final analysis, though, it was not the individual features of Java that made it so remarkable	
+The C# Connection	
+	C# is closely related to Java
+How Java Impacted the Internet
+	Java Applets
+		An applet is a special kind of Java program that is designed to be transmitted over the Internet and automatically executed inside a Java-compatible web browser. 
+		If the user clicks a link that contains an applet, the applet will download and run in the browser
+		small programs.such as a loan calculator
+		applet allowed some functionality to be moved from the server to the client.
+		the applet is a dynamic, self-executing program. Such a program is an active agent on the client computer, yet it is initiated by the server.
+		For reasons that will be explained, beginning with JDK 9, the phase-out of applets began, with applet support beginning with JDK 9, the phase-out of applets began, with applet support being removed by JDK 11.
+	Security
+		every time you download a “normal” program, you are taking a risk, because the code you are downloading might contain a virus, Trojan horse, or other harmful code
+		Java achieved this protection by enabling you to confine an application to the Java execution environment and prevent it from accessing other parts of the computer. (You will see how this is accomplished shortly.) The ability to download programs with a degree of confidence that no harm will be done may have been the single most innovative aspect of Java
+	Portability
+Java’s Magic: The Bytecode
+	Bytecode is a highly optimized set of instructions designed to be executed by what is called the Java Virtual Machine (JVM),
+	portablity id because of JVM
+	The fact that a Java program is executed by the JVM also helps to make it secure. Because the JVM is in control, it manages program execution. Thus, it is possible for the JVM to create a restricted execution environment, called the sandbox, that contains the program, preventing unrestricted access to the machine. Safety is also enhanced by certain restrictions that exist in the Java language.
+	In general, when a program is compiled to an intermediate form and then interpreted by a virtual machine, it runs slower than it would run if compiled to executable code. However, with Java, the differential between the two is not so great. Because bytecode has been highly optimized, the use of bytecode enables the JVM to execute programs much faster than you might expect.
+    HotSpot technology was introduced not long after Java’s initial release. HotSpot provides a Just-InTime (JIT) compiler for bytecode. When a JIT compiler is part of the JVM, Time (JIT) compiler for bytecode. When a JIT compiler is part of the JVM, selected portions of bytecode are compiled into executable code in real time, on a piece-by-piece, demand basis. It is important to understand that an entire Java program is not compiled into executable code all at once. Instead, a JIT compiler compiles code as it is needed, during execution. Furthermore, not all sequences of bytecode are compiled—only those that will benefit from compilation. The remaining code is simply interpreted.
+Moving Beyond Applets
+	applet removed-need support from browser thats why
+	java webstart added as alternative to applet
+	it enabled an application to be dynamically downloaded from a web page. It was a deployment mechanism that was especially useful for larger Java applications that were not appropriate for applets
+	The difference between an applet and a Web Start application is that a Web Start application runs on its own, not inside the browser. Thus, it looks much like a “normal” application. It does, however, require that a standalone JRE that supports Web Start is available on the host system. Beginning with JDK 11, Java Web Start support has been removed.
+	jlink tool added by JDK 9. It can create a complete run-time image that includes all necessary support for your program, including the JRE.
+A Faster Release Schedule
+	Each six-month release, now called a feature release, will include those features ready at the time of the release.
+	March and September
+	As a result, JDK 10 was released in March 2018, which was six months after the release of JDK 9
+Servlets: Java on the Server Side
+	 A servlet is a small program that executes on the server.
+	 Servlets are used to create dynamically generated content that is then served to the client.
+	 dynamically generated content was available through mechanisms such as CGI (Common Gateway Interface), the servlet offered several advantages, including increased performance.
+	 Because servlets (like all Java programs) are compiled into bytecode and executed by the JVM, they are highly portable. Thus, the same servlet can be used in a variety of different server environments. The only requirements are that the server support the JVM and a servlet container. Today, server-side code in general constitutes a major use of Java
+	 
